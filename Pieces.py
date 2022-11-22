@@ -8,7 +8,12 @@ class Corner:                        # Unfortunately, inheritance isn't a thing 
     self.correctCenter3 = color3
     self.cubeTwist = 0             # 0 = correct, 1 = twisted clockwise, 2 = twisted counter-clockwise
     self.posX = posX               # Explained in "cube" class; all in relation to facing white w/blue on top
+    self.posY = posY
     
  def changePos(self, orient):
-    if orient == "c":
-        if self.posX = 
+    if orient == "xc":    # Only regarding x, clockwise
+        if self.posX != 4:
+            self.posX += 1
+        else:
+            self.posX -= 1
+            
